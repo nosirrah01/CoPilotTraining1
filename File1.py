@@ -41,3 +41,15 @@ def test_binary_search_finds_existing_item():
 
 def test_binary_search_returns_negative_one_for_missing_item():
     assert binary_search([1, 3, 5, 7, 9], 4) == -1
+
+
+def test_reverse_string_with_regular_text():
+    assert reverse_string("hello") == "olleh"
+
+
+def test_reverse_string_with_empty_text():
+    assert reverse_string("") == ""
+
+
+def test_reverse_string_with_palindrome():
+    assert reverse_string("level") == "level"
