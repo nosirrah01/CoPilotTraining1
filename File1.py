@@ -23,6 +23,9 @@ def binary_search(items, target):
 
     return -1
 
+# Function to reverse a string
+def reverse_string(s):
+    return s[::-1]
 
 def test_calculate_average_empty_returns_zero():
     assert calculate_average([]) == 0
