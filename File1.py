@@ -22,3 +22,19 @@ def binary_search(items, target):
             right = mid - 1
 
     return -1
+
+
+def test_calculate_average_empty_returns_zero():
+    assert calculate_average([]) == 0
+
+
+def test_calculate_average_with_values():
+    assert calculate_average([2, 4, 6, 8]) == 5
+
+
+def test_binary_search_finds_existing_item():
+    assert binary_search([1, 3, 5, 7, 9], 7) == 3
+
+
+def test_binary_search_returns_negative_one_for_missing_item():
+    assert binary_search([1, 3, 5, 7, 9], 4) == -1
