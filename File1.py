@@ -1,30 +1,30 @@
-def calculate_average(numbers):
+from typing import Iterable, Sequence
+
+
+def calculate_average(numbers: Sequence[float]) -> float:
     """Return the average of a sequence of numbers. Returns 0 for empty input."""
-    total = sum(numbers)
     count = len(numbers)
     if count == 0:
         return 0
-    return total / count
+    return sum(numbers) / count
 
-def binary_search(items, target):
-    left = 0
-    right = len(items) - 1
+def binary_search(items: Sequence[float], target: float) -> int:
+    """Perform binary search on a sorted sequence. Return index or -1 if not found."""
+    left, right = 0, len(items) - 1
 
     while left <= right:
-        # use integer division to get middle index
         mid = (left + right) // 2
-
         if items[mid] == target:
             return mid
-        elif items[mid] < target:
+        if items[mid] < target:
             left = mid + 1
         else:
             right = mid - 1
 
     return -1
 
-# Function to reverse a string
-def reverse_string(s):
+def reverse_string(s: str) -> str:
+    """Return the reversed string."""
     return s[::-1]
 
 def test_calculate_average_empty_returns_zero():
